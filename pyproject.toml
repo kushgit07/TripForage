@@ -1,0 +1,43 @@
+[tool.poetry]
+name = "ai-travel-agent"
+version = "1.0.0"
+description = "LangGraph-based AI travel agent: flight & hotel search with human-in-the-loop email delivery."
+authors = ["Swapnil Singh"]
+readme = "README.md"
+packages = [{ include = "travel_agent", from = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+python-dotenv = "^1.0.1"
+pydantic = "^2.8.0"
+pydantic-settings = "^2.4.0"
+langchain = "^0.2.16"
+langchain-core = "^0.2.38"
+langchain-groq = "^0.1.9"
+langchain-openai = "^0.1.23"
+langgraph = "^0.2.14"
+streamlit = "^1.38.0"
+requests = "^2.32.3"
+tenacity = "^8.5.0"
+cachetools = "^5.5.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.2"
+pytest-mock = "^3.14.0"
+responses = "^0.25.3"
+ruff = "^0.6.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 145
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
