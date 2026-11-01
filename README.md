@@ -116,6 +116,4 @@ All tests run offline — the Duffel client, LLM, and Resend client are mocked/f
 - No persistent conversation history across app restarts (LangGraph's `MemorySaver` is
   in-memory) — swapping in a SQLite/Postgres checkpointer would fix that for a real deployment.
 
-## License
 
-MIT — see `LICENSE`.
