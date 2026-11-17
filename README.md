@@ -1,4 +1,4 @@
-# ✈️ AI Travel Agent
+# ✈️ AI Travel 
 
 A LangGraph-based travel assistant that searches flights and hotels, holds a
 conversation to refine the request, and — with a human-in-the-loop review step —
